@@ -1,0 +1,43 @@
+	Vim Notes
+
+	Normal Mode
+s - substitute - press once and then another key to replace highlighted character
+
+
+When printing strings, remember to end them with \0 (NUL)	
+
+
+	calling variables in [printf()]
+%d - digit
+%c - character
+%s - string
+
+
+	pointers
+type *ptr - A pointer of type named [ptr]
+*ptr - The value of whateer ptr is pointed at
+*(ptr + i) - The value of (whatever [ptr] is pointed at plus i)
+&thing - The address of [thing]
+type *ptr = &thing - A p0ointer of the type named [ptr] set to the address of [thing]
+ptr++ - Increment where [ptr] points
+
+	struct
+	defining a struct
+
+typedef struct STRUCTNAME{
+	DATATYPE STRUCTELEMENTNAME; 
+	DATATYPE STRUCTELEMENTNAME; 
+}
+
+	creating struct of created type
+
+struct STRUCTNAME INSTANCENAME;
+
+	defining value of elements
+	for heap
+
+INSTANCENAME->ELEMENTNAME = VALUE;
+
+	for stack
+
+INSTANCENAME.ELEMENTNAME = VALUE;

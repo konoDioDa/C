@@ -1,0 +1,5 @@
+assert.h - provides macro [assert()]. This macro implements an assertion, which verifies assumptions made by the program and prints a diagnostic message if the assumption is false (compares equal to 0)
+
+stdlib.h - the general purpose standard library of the C language. Provides functions involving memory allocation, process contro and conversions, among other things. Also compatible with C++
+
+string.h - provides functions for manipulating strings. provides NULL pointer constant as seen in ex16

@@ -1,0 +1,19 @@
+1-5	bring in libraries
+7-8	define constants MAX_DATA 512, MAX_ROWS 100
+11-16 struct [Address]: int id; int set; char name[MAX_DATA - 512]; char email[MAX_DATA - 512]
+18-20 struct [Database]: struct Address rows[MAX_ROWS - 100]
+22-25 struct [Connection]: FILE *file; struct Database *db;
+27-40 function [void die(const char *message)] if [errno] isn't [0], [perror] reports [message] to stdout; if [errno] is anything but [0], prints [message] and calls [Database_close(conn)], exits with error code [1]
+42-44 function [void Address_print(struct Address (addr)] brings in a struct [Address] and prints it's values [int id], [set], [name] and [email] in a nicely formatted manner
+46-50	function [void Database_load(struct Connection *conn)] brings in a struct [Connection], uses [fread()] to make [conn->db] a pointer, take the size of the [struct Database], specify one element of that size, streams the content of [conn->file] into a variable [rc]. It then checks if [rc] is not equal to 1; If it's not, it calls [die("Failed to load database.")]
+52-71 struct [Connection]: *Database_open(const)
+
+
+
+
+int main (int argc, char *argv[]){}
+	check [argc] is less than 3
+		if it is, print proper program syntax
+set char [*filename] equal to argv[1]
+set char [action] equal to vector [0] of vector [2] //think backwards with that last bit
+define struct [Connection] [*conn] as equal to [const char]

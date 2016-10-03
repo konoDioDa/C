@@ -1,0 +1,19 @@
+	function pointers and callbacks
+
+
+	using typedef
+
+	typedef int (*typeName) (int type, int format);
+
+The syntax above creates a new fake type with the name "typeName". Any instances of this type will receive a new name when declared, similar to structs
+
+	int *testFunction(int *numbers, int count, typeName cbk) {
+
+The line of code above defines a function called "testFunction". When called it expects an integer [*numbers], an integer [count], and a new instance of our created fake type [typeName] that will be refered to in the function as [cbk]
+
+Later on, we could potentially define other functions that adhere to the formatting in [*typeName] (ie: a function that expects two integers) and perform some arbitrary action within that function.
+
+ We could then call our [*testFunction] with one of those compatible functions
+
+
+question for Pete: Are pointers to functions (a callback) simply a way for a function to bring in another function, so the latter function's actions are readily available for use?

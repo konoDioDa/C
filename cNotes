@@ -1,0 +1,24 @@
+NUL byte overruns
+testarosa
+\n main() : For the function to be totally complete it needs to return an INT and take two parameters: an INT for the argument cound and an array of CHAR * strings for arguments
+Variable declaration follows 'TYPE NAME = VALUE;' format.
+how [make] works:/
+1. Does the file ex1 exist?/
+2. No. Is there a file that starts with ex1?/
+Yes, ex1.c. Wait, I know how to build .c files./
+4. I'll run this command [cc ex1.c -o ex1] to build that file/
+5. I made the executable ex1 by using cc to build it from ex1.c.
+
+This Makefile is showing you some new stuff with make. First [CFLAGS] is in the file so we never have to set it again. The [-g] flag gets debugging info. [clean] tells make how to clean up our compilation.
+
+	c functions and macros
+
+abs() - Get absolute value of an int (other classes?).
+
+labs() - Get absolute value of a long int.
+
+floor() - Round a float down.
+
+log10() - Get logrithm of value to base 10
+
+div(), ldiv() and lldiv() - Provides the quotient and remainder of (number, divisor) in the form of a struct div_t, ldiv_t, or lldiv_t. You must create a struct of any of those types before setting an arbitrary variable equal to STRUCTNAME.quot, or STRUCTNAME.rem for quotient and remainder respectively
